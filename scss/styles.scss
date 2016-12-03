@@ -1,0 +1,89 @@
+@import '../node_modules/normalize.css/normalize';
+
+body {
+  background-color: #ffff99;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  background-color: white;
+  margin: 0 auto;
+  padding: 25px;
+  width: 960px;
+  overflow: auto;
+}
+
+input {
+  &[type="text"],
+  &[type="date"] {
+    height: 40px;
+  }
+}
+
+.title {
+  width: 500px;
+}
+
+
+.title, .date, .submitbutton {
+  display:block;
+  float: left;
+}
+
+.date {
+  margin: 0 63px;
+}
+
+button {
+  height: 40px;
+}
+
+.list-items {
+  clear: left;
+  list-style: none;
+  padding: 0;
+  float: left;
+  width: 100%;
+
+  li {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  .done {
+    background-color: lighten(#333, 25%);
+    text-decoration: line-through;
+  }
+}
+
+.item-date {
+  float: right;
+}
+.remove-button {
+  float: right;
+  margin-left: 10px;
+  height: 20px;
+  border: none;
+  color: red;
+}
+
+@media (max-width: 960px) {
+  .wrapper {
+    max-width: 100%;
+  }
+  .title {
+    width: 100%;
+  }
+  .date, .submitbutton {
+    margin: 20px 0 0;
+    width: calc(50% - 10px;
+  }
+  .date {
+    margin-right: 20px;
+  }
+}
